@@ -28,6 +28,11 @@ class GeocodingController {
         return ResponseEntity.ok(geocodingService.getCoordinates(address));
     }
 
+    @GetMapping("geocoding/harsh")
+    public ResponseEntity<Map<String, Double>> forwardGeocodingharsh(@RequestParam String address) {
+        return ResponseEntity.ok(geocodingService.getCoordinates(address));
+    }
+
     // To get latitude and longitude from Address
     @GetMapping("geocoding/hello")
     public ResponseEntity<Map<String, Double>> forwardGeocodingHello(@RequestParam String address) {
